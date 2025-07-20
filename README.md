@@ -88,6 +88,10 @@ yarn dev
 npm run dev
 ```
 
+```
+#or
+```
+
 ```bash
 # Build the Docker image
 docker build -t secure-auth .
