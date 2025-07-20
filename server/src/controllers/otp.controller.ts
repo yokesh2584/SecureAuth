@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { sendOTPEmail } from "../utils/mailer";
-import { saveOTP, verifyOTP } from "../utils/mailer";
+import { sendOTPEmail } from "../utils/mailer.js";
+import { saveOTP, verifyOTP } from "../utils/mailer.js";
 
 // @route POST/api/otp/send-otp
 export const sendOtp = async (req: Request, res: Response) => {
