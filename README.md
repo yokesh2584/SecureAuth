@@ -83,14 +83,18 @@ npm install
 
 ```bash
 cd server
-yarn dev or npm run dev
+yarn dev
+#or
+npm run dev
 ```
 
 # 🌐 Frontend
 
 ```bash
 cd client
-yarn dev or npm run dev
+yarn dev
+#or
+npm run dev
 ```
 
 - Then open: http://localhost:9000
