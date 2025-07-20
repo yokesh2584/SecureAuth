@@ -1,7 +1,7 @@
 # render.yaml
 services:
   - type: web
-    name: secure-auth-api
+    name: secure-auth-server
     env: node
     plan: free
     rootDir: server
