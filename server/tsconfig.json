@@ -11,7 +11,8 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "moduleDetection": "force",
-    "typeRoots": ["./node_modules/@types"]
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["node", "express", "cors", "cookie-parser", "jsonwebtoken"]
   },
   "include": ["src/**/*"]
 }
