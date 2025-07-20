@@ -44,7 +44,3 @@ server/.vite/
 # 💚 Sonner Toaster or Zustand storage 
 *.local.json
 
-# ❌ Lock files 
-yarn.lock
-package-lock.json
-
