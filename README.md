@@ -88,6 +88,15 @@ yarn dev
 npm run dev
 ```
 
+```bash
+# Build the Docker image
+docker build -t secure-auth .
+
+# Run the Docker container with your .env file
+docker run -p 5000:5000 --env-file .env secure-auth
+
+```
+
 # 🌐 Frontend
 
 ```bash
