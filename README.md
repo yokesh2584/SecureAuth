@@ -178,6 +178,6 @@ If you found this helpful, feel free to **fork, star ⭐, or contribute**!
 - 📸 Profile Picture Upload
 - 🛈 Update Info
 - 📋 Form animations, page transitions
-- 🚀 Deployed live link (coming soon!)
+- 🚀 Deployed live link : https://secure-auth-client.vercel.app
 
 ---
