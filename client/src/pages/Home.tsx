@@ -42,7 +42,7 @@ const Home = () => {
     <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-purple-600 via-indigo-700 to-blue-800 px-4 pt-20 text-white">
       <section className="w-full max-w-xl rounded-2xl border border-white/20 bg-white/10 p-10 text-center shadow-2xl backdrop-blur-lg transition-all duration-300 hover:shadow-purple-400/40">
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-white drop-shadow-md">
-          Welcome to SecureZone
+          Welcome to SecureAuth
         </h1>
         <p className="mb-6 text-base font-medium text-white/80">
           A modern secure authentication system with token-based flow, email
