@@ -75,7 +75,7 @@ export const registerUser = async (req: Request, res: Response) => {
     res.cookie("refreshToken", refreshToken, {
       httpOnly: true,
       secure: isInProduction, // true only in production with https
-      sameSite: isInProduction ? "none" : "lax",
+      sameSite: "none",
       path: "/api/auth/refresh-token",
       maxAge: sevenDays,
     });
@@ -122,7 +122,7 @@ export const loginUser = async (req: Request, res: Response) => {
     res.cookie("refreshToken", refreshToken, {
       httpOnly: true,
       secure: isInProduction, // true only in production with https
-      sameSite: isInProduction ? "none" : "lax",
+      sameSite: "none",
       path: "/api/auth/refresh-token",
       maxAge: rememberMe ? twentyOneDays : sevenDays,
     });
