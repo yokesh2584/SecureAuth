@@ -27,7 +27,7 @@ const Navbar = () => {
           className="flex items-center gap-2 text-2xl font-extrabold text-purple-800 drop-shadow-sm transition-all hover:scale-105"
         >
           <FaLock className="text-purple-800" />
-          <span>SecureZone</span>
+          <span>SecureAuth</span>
         </Link>
 
         {/* Dropdown */}
