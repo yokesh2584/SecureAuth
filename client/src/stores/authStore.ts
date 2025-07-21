@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import { createJSONStorage, persist } from "zustand/middleware";
 import axiosPrivate from "../utils/axios";
 import { toast } from "sonner";
 import {
@@ -139,6 +139,7 @@ export const useAuthStore = create<AuthStore>()(
     }),
     {
       name: "Auth-Storage",
+      storage: createJSONStorage(() => localStorage),
     },
   ),
 );
