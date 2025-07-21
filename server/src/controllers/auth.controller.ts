@@ -10,6 +10,13 @@ import {
 // JWT_SECRET
 const REFRESH_TOKEN_SECRET = process.env.REFRESH_TOKEN_SECRET!;
 
+// Is in Production?
+const isInProduction = process.env.NODE_ENV === "production";
+
+// Cookie expiry
+const sevenDays = 7 * 24 * 60 * 60 * 1000;
+const twentyOneDays = 21 * 24 * 60 * 60 * 1000;
+
 // @route POST/api/auth/pre-login-check
 export const preLoginCheck = async (req: Request, res: Response) => {
   const { email } = req.body;
@@ -67,10 +74,10 @@ export const registerUser = async (req: Request, res: Response) => {
 
     res.cookie("refreshToken", refreshToken, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production", // true only in production with https
-      sameSite: "lax",
+      secure: isInProduction, // true only in production with https
+      sameSite: isInProduction ? "none" : "lax",
       path: "/api/auth/refresh-token",
-      maxAge: 7 * 24 * 60 * 60 * 1000,
+      maxAge: sevenDays,
     });
 
     // sent response with message, user object and token
@@ -114,10 +121,10 @@ export const loginUser = async (req: Request, res: Response) => {
 
     res.cookie("refreshToken", refreshToken, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production", // true only in production with https
-      sameSite: "lax",
+      secure: isInProduction, // true only in production with https
+      sameSite: isInProduction ? "none" : "lax",
       path: "/api/auth/refresh-token",
-      maxAge: rememberMe ? 21 * 24 * 60 * 60 * 1000 : 7 * 24 * 60 * 60 * 1000,
+      maxAge: rememberMe ? twentyOneDays : sevenDays,
     });
 
     return res.status(200).json({
